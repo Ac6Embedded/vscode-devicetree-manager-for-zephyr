@@ -1,0 +1,101 @@
+Devicetree Manager for Zephyr: End-User License Agreement
+
+Copyright (c) 2026 Ac6 SAS. All rights reserved.
+
+This software (the "Extension") is proprietary and closed source. The
+source code is not made available under any open-source license. By
+installing or using the Extension you agree to the terms below.
+
+
+1. Grant of license
+
+   Ac6 SAS grants you a personal, non-exclusive, non-transferable,
+   royalty-free, revocable licence to install and use the Extension
+   for any lawful purpose, including commercial use. No fee is
+   charged for this licence.
+
+
+2. Restrictions
+
+   Except to the extent that applicable law expressly prohibits the
+   restriction, you may not:
+
+   a) copy, modify, adapt, translate, or create derivative works of
+      the Extension;
+   b) sublicense, sell, lease, rent, or otherwise distribute the
+      Extension or any part of it;
+   c) reverse engineer, decompile, disassemble, or otherwise attempt
+      to derive the source code of the Extension, except to the
+      extent that interoperability information cannot be obtained
+      from Ac6 SAS on reasonable terms;
+   d) remove, alter, or obscure any proprietary notice, label, or
+      mark on the Extension;
+   e) use the Extension to develop a competing product.
+
+
+3. Ownership
+
+   The Extension is licensed, not sold. Ac6 SAS and its licensors
+   retain all right, title, and interest in and to the Extension,
+   including all intellectual-property rights. Nothing in this
+   agreement transfers ownership.
+
+
+4. Updates
+
+   Ac6 SAS may, but is not obliged to, provide updates, bug fixes,
+   or new versions of the Extension. Any such update is governed by
+   this agreement unless it ships with separate terms.
+
+
+5. Third-party components
+
+   The Extension may include or rely on third-party components that
+   are subject to their own licences. Those licences, where
+   applicable, are listed in the Extension's documentation or
+   source bundle and prevail over this agreement for the components
+   they cover.
+
+
+6. Disclaimer of warranty
+
+   THE EXTENSION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+   NON-INFRINGEMENT. AC6 SAS DOES NOT WARRANT THAT THE EXTENSION
+   WILL BE ERROR-FREE OR UNINTERRUPTED.
+
+
+7. Limitation of liability
+
+   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT
+   SHALL AC6 SAS OR ITS LICENSORS BE LIABLE FOR ANY INDIRECT,
+   INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR
+   ANY LOSS OF PROFITS, REVENUE, DATA, OR DATA USE, ARISING OUT OF
+   OR IN CONNECTION WITH THE EXTENSION, WHETHER UNDER CONTRACT,
+   TORT, OR ANY OTHER THEORY OF LIABILITY, EVEN IF AC6 SAS HAS BEEN
+   ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+
+8. Termination
+
+   This agreement terminates automatically if you breach any of its
+   terms. On termination you must stop using the Extension and
+   destroy all copies in your possession. Sections 3, 6, 7, 9, and
+   10 survive termination.
+
+
+9. Governing law
+
+   This agreement is governed by the laws of France, without
+   reference to its conflict-of-laws provisions. Any dispute
+   arising out of or in connection with this agreement is subject
+   to the exclusive jurisdiction of the competent courts of Paris,
+   France.
+
+
+10. Contact
+
+    Ac6 SAS
+    https://www.ac6.fr
+    tools@ac6.fr
