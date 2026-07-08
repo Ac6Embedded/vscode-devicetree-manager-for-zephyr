@@ -23,11 +23,20 @@ ESP32; tomorrow: anyone we add a backend for).
 
 ## Requirements
 
-- [Workbench for Zephyr](https://github.com/Ac6Embedded/vscode-zephyr-workbench)
-  (this extension activates against its API to discover Zephyr
-  applications and build configurations).
 - A Python interpreter with `edtlib` (typically the Zephyr venv the
   Workbench is already configured against).
+
+## Bundled (non-blocking)
+
+- [Workbench for Zephyr](https://github.com/Ac6Embedded/vscode-zephyr-workbench)
+  ships as an **extension pack** member, so installing this extension also
+  installs the Workbench. It is a **soft dependency**, though: DT Manager
+  does not require it to activate. When the Workbench is present, this
+  extension talks to its API to discover Zephyr applications and build
+  configurations and to reuse its configured Zephyr venv. If you disable or
+  uninstall the Workbench, the panel still opens standalone on a build
+  directory (see "How to open" below) and falls back to its own Python
+  discovery.
 
 ## How to open
 
