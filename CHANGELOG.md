@@ -6,7 +6,7 @@ documented in this file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how
 to structure this file.
 
-## [1.1.0]
+## [1.2.0]
 - Added Zephyr Sysbuild support: the manager now opens a sysbuild build directory by resolving its
   default (or MAIN) image, with an **Image** selector to inspect other images such as mcuboot on
   multi-image builds.
