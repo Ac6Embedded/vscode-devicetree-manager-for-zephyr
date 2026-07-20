@@ -6,6 +6,14 @@ documented in this file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how
 to structure this file.
 
+## [1.1.0]
+- Added Zephyr Sysbuild support: the manager now opens a sysbuild build directory by resolving its
+  default (or MAIN) image, with an **Image** selector to inspect other images such as mcuboot on
+  multi-image builds.
+- Overlay writes now target the file the build actually consumed instead of always composing
+  `boards/<board>.overlay`, fixing qualified/multicore board targets and no longer unhooking
+  `app.overlay`-based projects.
+
 ## [1.0.14]
 - Renamed the **Export Custom Build as Task** action and added a `tasks.json` hint on hover.
 
