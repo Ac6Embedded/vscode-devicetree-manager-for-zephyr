@@ -19,10 +19,21 @@ surface of the devicetree:
 
 Generalised so the same view works for any vendor whose HAL ships
 machine-generated pinctrl descriptions (today: STM32, NXP MCX,
-ESP32; tomorrow: anyone we add a backend for).
+ESP32, Silicon Labs Series 2, Renesas RA and RA0; tomorrow: anyone we
+add a backend for).
+
+Renesas does not ship its pin table with Zephyr. The first time you open
+a Renesas RA board, the chip area offers an **Install** button: it
+downloads the Renesas pin data (about 14 MB, from
+[pinmapping-renesas](https://github.com/Ac6Embedded/pinmapping-renesas),
+which republishes the pin files of each Renesas FSP release), checks it,
+and keeps it in `~/.zephyr-workbench/devicetree-manager/renesas/`. Every
+RA board then works offline. When a newer version is published, the
+panel offers it (at most one check a week).
 
 ## Requirements
 
+- VS Code 1.88 or newer.
 - A Python interpreter with `edtlib` (typically the Zephyr venv the
   Workbench is already configured against).
 

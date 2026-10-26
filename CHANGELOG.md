@@ -6,6 +6,17 @@ documented in this file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how
 to structure this file.
 
+## [1.3.0]
+- Added Renesas RA and RA0 boards to the pin configurator: chip view, pin functions and overlay
+  generation, written with Zephyr's own `RA_PSEL(...)` macros.
+- Renesas pin data is installed once from the chip area (**Install**, about 14 MB, from
+  [pinmapping-renesas](https://github.com/Ac6Embedded/pinmapping-renesas), which follows Renesas FSP
+  releases). Newer versions are offered with **Update** when a chip is missing, and at most once a
+  week in a notification.
+- Board pin settings that a Renesas chip does not offer are shown as "not offered" functions with a
+  warning, so they can be found and removed.
+- Requires VS Code 1.88 or newer.
+
 ## [1.2.0]
 - Added Zephyr Sysbuild support: the manager now opens a sysbuild build directory by resolving its
   default (or MAIN) image, with an **Image** selector to inspect other images such as mcuboot on
