@@ -19,8 +19,8 @@ surface of the devicetree:
 
 Generalised so the same view works for any vendor whose HAL ships
 machine-generated pinctrl descriptions (today: STM32, NXP MCX,
-ESP32, Silicon Labs Series 2, Renesas RA and RA0; tomorrow: anyone we
-add a backend for).
+ESP32, Silicon Labs Series 2, Renesas RA and RA0, Infineon; tomorrow:
+anyone we add a backend for).
 
 Renesas does not ship its pin table with Zephyr. The first time you open
 a Renesas RA board, the chip area offers an **Install** button: it
@@ -30,6 +30,14 @@ which republishes the pin files of each Renesas FSP release), checks it,
 and keeps it in `~/.zephyr-workbench/devicetree-manager/renesas/`. Every
 RA board then works offline. When a newer version is published, the
 panel offers it (at most one check a week).
+
+Infineon PSoC 6, PSoC 4, PSoC Control C3, CYW20829, XMC7000 / TRAVEO T2G,
+PSoC Edge and XMC4500 / XMC4700 boards work out of the box: Zephyr
+defines part of each chip's pin functions, and the rest come from the
+Infineon HAL your build already uses. A function Zephyr has no pin node
+for gets one in the overlay, written with Zephyr's own macros, and every
+assigned pin gets the drive settings Infineon uses (an Infineon pin with
+none does nothing).
 
 ## Requirements
 
