@@ -12,6 +12,12 @@ application + build configuration, a unified view of every editable
 surface of the devicetree:
 
 - Pin muxing (chip pin matrix, vendor-themed)
+- GPIOs: pins used through `*-gpios` properties (LEDs, buttons, chip
+  selects, reset lines, ...) show on the chip, with a warning when a pin
+  has two owners, and each GPIO property has a table editor (pin by name,
+  active level, pull, drive). A GPIO property that is not set takes a pin
+  from its table ("Pick a pin…") or from the chip (the pin's "GPIO"
+  function)
 - Devicetree node tree with binding-typed property editors
 - Per-node detail card with tabs (Properties, Channels, Groups, Pin Groups, Regions, ...)
 - Staging + overlay generation: writes `boards/<board>.overlay` with

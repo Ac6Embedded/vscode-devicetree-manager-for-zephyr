@@ -6,6 +6,19 @@ documented in this file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how
 to structure this file.
 
+## [1.3.1]
+- Added Infineon boards to the pin configurator: PSoC 6, PSoC 4, PSoC Control C3, CYW20829,
+  XMC7000 / TRAVEO T2G and PSoC Edge, plus XMC4500 and XMC4700. A function Zephyr does not
+  predefine gets a pin node in the overlay, with Infineon's default drive mode; an XMC4 input also
+  sets its peripheral's input selector.
+- Added GPIO handling: pins used through `*-gpios` properties (LEDs, buttons, chip selects, reset
+  lines) show on the chip in violet, with a warning when a pin also goes to a peripheral or to
+  another GPIO.
+- Each GPIO property opens as a table in the node editor: the pin by name, the active level, pull
+  and drive. A GPIO property that is not set takes a pin from its table (**Pick a pin…**) or from
+  the pin (**GPIO** in the Functions card). The overlay includes Zephyr's GPIO flags header.
+- NXP MCX A boards (FRDM-MCXA156 and others) now show their pins.
+
 ## [1.3.0]
 - Added Renesas RA and RA0 boards to the pin configurator: chip view, pin functions and overlay
   generation, written with Zephyr's own `RA_PSEL(...)` macros.
