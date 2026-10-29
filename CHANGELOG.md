@@ -6,6 +6,12 @@ documented in this file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how
 to structure this file.
 
+## [1.3.3]
+- The Clocks view offers only the clock sources and frequencies each chip supports: some Silicon
+  Labs sources it offered stopped the build.
+- A clock source or setting that Zephyr refuses to build now shows as an error.
+- Crystal frequencies are labelled "crystal": they describe the board.
+
 ## [1.3.2]
 - Added the Clocks view: the **Pins | Clocks** toggle at the top of the chip card shows the clock
   tree, every clock with its frequency and the peripherals that run on it. Dividers, multipliers and
