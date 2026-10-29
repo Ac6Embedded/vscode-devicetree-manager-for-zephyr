@@ -24,9 +24,16 @@ surface of the devicetree:
   per-block, per-property merge so user edits survive regenerations.
 
 Generalised so the same view works for any vendor whose HAL ships
-machine-generated pinctrl descriptions (today: STM32, NXP MCX,
-ESP32, Silicon Labs Series 2, Renesas RA and RA0, Infineon; tomorrow:
-anyone we add a backend for).
+machine-generated pinctrl descriptions (today: STM32, NXP MCX, Kinetis,
+S32K1 and LPC, Microchip SAM and PIC32C, ESP32, Silicon Labs Series 2,
+Renesas RA and RA0, Infineon; tomorrow: anyone we add a backend for).
+
+Some peripherals take pins only in one mode. A timer that Zephyr runs as
+a counter (an NXP FlexTimer or CTimer, a Microchip TCC, a TC on PIC32C
+and SAM E54 boards) becomes a PWM controller when you give it its first
+output pin. A Microchip SERCOM
+or an NXP LPC FlexComm gets its mode (UART, I2C, SPI) from you: the panel
+reports pins on one that has no mode yet, since the build would fail.
 
 Renesas does not ship its pin table with Zephyr. The first time you open
 a Renesas RA board, the chip area offers an **Install** button: it
