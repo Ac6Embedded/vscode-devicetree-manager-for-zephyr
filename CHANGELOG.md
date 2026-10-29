@@ -6,6 +6,28 @@ documented in this file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how
 to structure this file.
 
+## [1.3.2]
+- Added the Clocks view: the **Pins | Clocks** toggle at the top of the chip card shows the clock
+  tree, every clock with its frequency and the peripherals that run on it. Dividers, multipliers and
+  clock sources are changed in place, and the frequency Zephyr reads (`clock-frequency`) is kept in
+  step. Frequencies are checked against the chip's datasheet limits and the vendor's rules. Covered:
+  STM32 (most series), Renesas RA and RA0, Silicon Labs Series 2 and 3, NXP Kinetis KE1x.
+- Added NXP Kinetis, S32K1 and LPC (LPC51U68, LPC54114, LPC55), and Microchip SAM and PIC32C boards
+  to the pin configurator.
+- Added ADC and DAC channels (DAC from Zephyr 4.4): a channel is added by picking its pin, with
+  settings the driver accepts, and **Use in app** lists it in `/zephyr,user` `io-channels`.
+- Added PWM outputs: a `pwms` property opens as a table (the pin by name, the period, the
+  polarity), and each PWM controller gets an **Outputs** tab.
+- The Functions panel is now part of the Pins view: it opens when a pad is clicked and folds to a
+  rail. The Chip / List toggle moved to the chip card's search row.
+- An application that is not built yet now says "Build the application first", and opens by itself
+  once the build is done.
+- A custom board now finds its pin file from its SoC (an ESP32 board named after another variant no
+  longer gets the wrong chip).
+- Overlay changes that are already built no longer show as "unbuilt".
+- The IRQ line in the interrupts table is now read only, as the hardware sets it. The raw view still
+  edits every cell.
+
 ## [1.3.1]
 - Added Infineon boards to the pin configurator: PSoC 6, PSoC 4, PSoC Control C3, CYW20829,
   XMC7000 / TRAVEO T2G and PSoC Edge, plus XMC4500 and XMC4700. A function Zephyr does not
