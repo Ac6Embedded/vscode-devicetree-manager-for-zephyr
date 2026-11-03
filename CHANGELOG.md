@@ -6,6 +6,40 @@ documented in this file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how
 to structure this file.
 
+## [1.4.0]
+Stable release. It brings together the 1.3.x pre-releases.
+
+### Clocks view
+- New **Pins | Clocks** toggle on the chip card: the clock tree, each frequency, the peripherals on
+  each clock.
+- Dividers, multipliers and sources are edited in place.
+- Each chip offers only the sources and values it supports.
+- Choices that break the build or the boot show as errors.
+- Covers STM32, Renesas RA and RA0, Silicon Labs Series 2 and 3, NXP Kinetis KE1x.
+
+### Peripherals
+- GPIO: pins used by `*-gpios` properties show on the chip, with a warning on conflicts. Each GPIO
+  property opens as a table.
+- ADC and DAC channels: add a channel by picking its pin. **Use in app** adds it to `/zephyr,user`.
+  DAC needs Zephyr 4.4.
+- PWM outputs: `pwms` opens as a table, and each PWM controller gets an **Outputs** tab.
+
+### Pin configurator
+- New boards: Renesas RA and RA0, Infineon (PSoC, XMC, CYW20829, TRAVEO T2G), NXP Kinetis, S32K1,
+  LPC and MCX A, Microchip SAM and PIC32C.
+- Renesas pin data installs once from the chip area (**Install**), with **Update** for newer
+  versions.
+- The Functions panel is now part of the Pins view: click a pad to open it.
+
+### Fixes
+- Built overlay changes no longer show as "unbuilt".
+- A custom board finds its pin file from its SoC.
+- An app that is not built yet says "Build the application first", then opens once built.
+- The IRQ line in the interrupts table is read only.
+
+### Requirements
+- VS Code 1.88 or newer.
+
 ## [1.3.3]
 - The Clocks view offers only the clock sources and frequencies each chip supports: some Silicon
   Labs sources it offered stopped the build.
