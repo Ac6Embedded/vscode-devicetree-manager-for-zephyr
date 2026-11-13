@@ -6,7 +6,7 @@ documented in this file.
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how
 to structure this file.
 
-## [1.5.0]
+## [1.4.1]
 - Added Texas Instruments boards to the pin configurator: MSPM0 G and L, MSPM33C, CC13xx / CC26xx,
   CC23x0 and CC32xx. A function with no pin node in the build gets one in the overlay.
 - The Clocks view covers TI MSPM0 G and L from Zephyr 4.4, and MSPM33C on Zephyr 5.
