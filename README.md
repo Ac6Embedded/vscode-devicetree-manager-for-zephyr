@@ -26,7 +26,8 @@ surface of the devicetree:
 Generalised so the same view works for any vendor whose HAL ships
 machine-generated pinctrl descriptions (today: STM32, NXP MCX, Kinetis,
 S32K1 and LPC, Microchip SAM and PIC32C, ESP32, Silicon Labs Series 2,
-Renesas RA and RA0, Infineon; tomorrow: anyone we add a backend for).
+Renesas RA and RA0, Infineon, Texas Instruments MSPM0 / MSPM33 and
+SimpleLink CC; tomorrow: anyone we add a backend for).
 
 Some peripherals take pins only in one mode. A timer that Zephyr runs as
 a counter (an NXP FlexTimer or CTimer, a Microchip TCC, a TC on PIC32C
@@ -51,6 +52,14 @@ Infineon HAL your build already uses. A function Zephyr has no pin node
 for gets one in the overlay, written with Zephyr's own macros, and every
 assigned pin gets the drive settings Infineon uses (an Infineon pin with
 none does nothing).
+
+Texas Instruments MSPM0 G and L, MSPM33C, CC13xx / CC26xx, CC23x0 and
+CC32xx boards work out of the box too. An MSPM0 chip's pin table is the
+part's own header in the TI HAL your build already uses, and a
+SimpleLink CC chip's is in Zephyr's headers. A function with no pin node
+in the build gets one in the overlay. The build does not say the
+package, so the chip shows every pin of the part's series (all 32 DIOs
+on CC13xx / CC26xx).
 
 ## Requirements
 
